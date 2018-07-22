@@ -49,7 +49,7 @@ RUN composer global require "laravel/installer"
 
 RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.aliyun.com/g' /etc/apk/repositories
 
-RUN apk update && apk add -u nodejs
+RUN apk update && apk add -u nodejs libpng-dev python
 
 ENV PATH /root/.yarn/bin:$PATH
 
@@ -59,6 +59,7 @@ RUN apk update \
   && /bin/bash \
   && touch ~/.bashrc \
   && curl -o- -L https://yarnpkg.com/install.sh | bash \
-  && yarn config set registry 'https://registry.npm.taobao.org'
+  && yarn config set registry 'https://registry.npm.taobao.org' \
+  && npm install -g cnpm --registry=https://registry.npm.taobao.org
 
 WORKDIR /var/www
