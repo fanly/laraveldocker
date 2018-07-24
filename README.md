@@ -9,9 +9,9 @@
 - [x] PHP 7.2
 - [x] MySQL 5.7
 - [x] Redis
-- [x] NodeJS
+- [x] NodeJS 10.7.0
 - [ ] PostgreSQL
-- [x] Yarn
+- [x] Yarn 1.7.0
 - [x] Composer
 - [x] Laravel Envoy
 - [x] Laravel Installer
