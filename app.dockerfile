@@ -49,7 +49,7 @@ RUN composer global require "laravel/envoy"
 #install laravel installer
 RUN composer global require "laravel/installer"
 
-ENV NODE_VERSION 10.9.0
+ENV NODE_VERSION 10.7.0
 
 RUN addgroup -g 1000 node \
     && adduser -u 1000 -G node -s /bin/sh -D node \
