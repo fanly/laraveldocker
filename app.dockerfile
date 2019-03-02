@@ -51,7 +51,7 @@ RUN composer global require "laravel/installer"
 
 ENV NODE_VERSION 10.9.0
 
-RUN addgroup -g 1000 node \
+RUN apk update && addgroup -g 1000 node \
     && adduser -u 1000 -G node -s /bin/sh -D node \
     && apk add --no-cache \
         libstdc++ \
