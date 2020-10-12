@@ -18,6 +18,7 @@ RUN apk add --no-cache --virtual .build-deps \
         imagemagick \
         mysql-client \
         postgresql-libs \
+        openssl \
     && pecl install imagick \
     && docker-php-ext-enable imagick \
     && pecl install xdebug-2.6.1 \
